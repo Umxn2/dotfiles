@@ -21,7 +21,7 @@ return {
           lavender = "#f9e2af", -- yellow
           mauve = "#74c7ec", -- saffire
           blue = "#ff9ab6", -- pinkish red
-          peach = "#94e2d5", -- green
+          peach = "#94e2d5", -- greenish teal
           green = "#c0c0c0", -- silver
           red = "#ff7bb4", -- dark pink
           maroon = "#eac2e2", -- light pink
