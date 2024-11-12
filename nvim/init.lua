@@ -1,12 +1,13 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
-vim.api.nvim_create_autocmd("ColorScheme", {
-  pattern = "*",
-  callback = function()
-    vim.api.nvim_set_hl(0, "DiagnosticSignInfo", { fg = "#f9e5b1", bg = "NONE" })
-  end,
-})
+--vim.api.nvim_create_autocmd("ColorScheme", {
+--  pattern = "*",
+--  callback = function()
+--    vim.api.nvim_set_hl(0, "NoiceCmdlinePopupBorder", { fg = "#b4dced", bg = "none" })
+--  end,
+--})
 local highlight_groups = { "Normal", "NonText", "LineNr", "EndOfBuffer", "SignColumn" }
 for _, group in ipairs(highlight_groups) do
   vim.api.nvim_set_hl(0, group, { bg = "NONE" })
 end
 require("config.lazy")
+vim.cmd("highlight NoiceCmdlinePopupBorder guifg=#b4dced")
