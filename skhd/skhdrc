@@ -1,4 +1,4 @@
-cmd - return : open -na Wezterm
+cmd - return : open -a Wezterm
 
 # open qutebrowser
-cmd + shift - return : open -na Term
+cmd + shift - return : open -a Term

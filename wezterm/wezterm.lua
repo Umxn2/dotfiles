@@ -3,7 +3,7 @@ local config = {}
 config.term = "wezterm"
 config.color_scheme = ""
 config.colors = {
-	background = "#101212",
+	background = "#000000",
 	foreground = "#ffffff",
 	cursor_border = "#fae4a3",
 	cursor_bg = "#fae4a3",
@@ -11,12 +11,12 @@ config.colors = {
 	selection_fg = "#ffffff",
 	selection_bg = "#372f39",
 	ansi = {
-		"#bbbbbb",
-		"#ff759b",
-		"#baf59f",
-		"#fae4a3",
-		"#6fc5ff",
-		"#ffadef",
+		"#bbbbbb", -- black
+		"#ff759b", -- red
+		"#baf59f", -- green
+		"#fae4a3", -- yellow
+		"#6fc5ff", -- blue
+		"#ffadef", -- magenta
 		"#6fc5ff",
 		"#ffffff",
 	},
@@ -34,12 +34,12 @@ config.colors = {
 config.foreground_text_hsb = {
 	hue = 1.0,
 	saturation = 1.05,
-	brightness = 1.0,
+	brightness = 1.00,
 }
 config.dpi = 144.0
 config.bold_brightens_ansi_colors = false
 config.max_fps = 120
-config.font = wezterm.font("JetBrainsMono Nerd Font", { stretch = "Expanded", weight = "DemiBold" })
+config.font = wezterm.font("JetBrainsMono Nerd Font", { stretch = "Expanded", weight = "Bold" })
 config.font_size = 18
 config.window_decorations = "RESIZE"
 config.window_close_confirmation = "NeverPrompt"
@@ -50,10 +50,20 @@ config.window_padding = {
 	top = 0,
 	bottom = 0,
 }
+--local dimmer = { brightness = 0.3 }
+--config.background = {
+--	{
+--		source = {
+--			File = "Users/umang/.config/assets/wallpaper.jpeg",
+--		},
+--		hsb = dimmer,
+--		attachment = { Parallax = 0.1 },
+--	},
+--}
 --config.custom_block_glyphs = false
 config.enable_scroll_bar = false
 config.enable_tab_bar = false
-config.window_background_opacity = 0.70
+config.window_background_opacity = 0.87
 config.initial_cols = 150
 config.initial_rows = 42
 config.pane_focus_follows_mouse = true
