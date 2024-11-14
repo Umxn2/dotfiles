@@ -11,7 +11,7 @@ config.colors = {
 	selection_fg = "#ffffff",
 	selection_bg = "#372f39",
 	ansi = {
-		"#bbbbbb", -- black
+		"#000000", -- black
 		"#ff759b", -- red
 		"#baf59f", -- green
 		"#fae4a3", -- yellow
@@ -39,8 +39,8 @@ config.foreground_text_hsb = {
 config.dpi = 144.0
 config.bold_brightens_ansi_colors = false
 config.max_fps = 120
-config.font = wezterm.font("JetBrainsMono Nerd Font", { stretch = "Expanded", weight = "Bold" })
-config.font_size = 18
+config.font = wezterm.font("JetBrainsMono Nerd Font", { stretch = "Expanded", weight = "DemiBold" })
+config.font_size = 16
 config.window_decorations = "RESIZE"
 config.window_close_confirmation = "NeverPrompt"
 config.adjust_window_size_when_changing_font_size = false

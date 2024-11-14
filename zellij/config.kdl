@@ -234,7 +234,7 @@ ui {
 //   - true (default)
 //   - false
 //
-// pane_frames true
+ pane_frames false
 
 // Toggle between having Zellij lay out panes according to a predefined set of layouts whenever possible
 // Options:
@@ -271,7 +271,7 @@ ui {
          fg "#ffffff"
          bg "#101212"
          red "#ff759b"
-         green "#a5f9ff"
+         green "#a8deef"
          yellow "#f9e5b1"
          blue "#6fc5ff"
          magenta "#ffadef"
@@ -304,7 +304,7 @@ ui {
 //   - true (default)
 //   - false
 //
-// mouse_mode false
+ mouse_mode false
 
 // Configure the scroll back buffer size
 // This is the number of lines zellij stores for each pane in the scroll back
