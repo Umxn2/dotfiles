@@ -3,7 +3,7 @@ local config = {}
 config.term = "wezterm"
 config.color_scheme = ""
 config.colors = {
-	background = "#000000",
+	background = "#101010",
 	foreground = "#ffffff",
 	cursor_border = "#a8deef",
 	cursor_bg = "#a8deef",
@@ -33,13 +33,13 @@ config.colors = {
 }
 config.foreground_text_hsb = {
 	hue = 1.0,
-	saturation = 1.05,
+	saturation = 1.00,
 	brightness = 1.00,
 }
 config.dpi = 144.0
 config.bold_brightens_ansi_colors = false
 config.max_fps = 120
-config.font = wezterm.font("JetBrainsMono Nerd Font", { stretch = "Expanded", weight = "DemiBold" })
+config.font = wezterm.font("JetBrainsMono Nerd Font", { stretch = "Expanded", weight = "Medium" })
 config.font_size = 16
 config.window_decorations = "RESIZE"
 config.window_close_confirmation = "NeverPrompt"
@@ -63,7 +63,7 @@ config.window_padding = {
 --config.custom_block_glyphs = false
 config.enable_scroll_bar = false
 config.enable_tab_bar = false
-config.window_background_opacity = 0.85
+config.window_background_opacity = 0.90
 config.initial_cols = 150
 config.initial_rows = 42
 config.pane_focus_follows_mouse = true

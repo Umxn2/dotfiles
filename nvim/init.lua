@@ -13,6 +13,7 @@ require("config.lazy")
 vim.g.terminal_emulator = "wezterm"
 vim.opt.termguicolors = true
 vim.cmd("highlight NoiceCmdlinePopupBorder guifg=#b4dced")
+vim.cmd("highlight WinSeparator guifg=#b4dced")
 vim.cmd([[
   highlight TermNormal guibg=NONE ctermbg=NONE
   highlight TermFloat guibg=NONE ctermbg=NONE

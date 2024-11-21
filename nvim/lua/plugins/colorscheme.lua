@@ -15,18 +15,19 @@ return {
       no_italic = true,
       color_overrides = {
         mocha = {
-          base = "#000000",
-          mantle = "#000000",
-          crust = "#000000",
-          lavender = "#f9e2af", -- yellow
-          mauve = "#74c7ec", -- saffire
-          blue = "#ff9ab6", -- pinkish red
-          peach = "#94e2d5", -- greenish teal
+          base = "#1a1a1a",
+          mantle = "#1a1a1a",
+          crust = "#1a1a1a",
+          lavender = "#cdeaf7", -- yellow
+          mauve = "#6fc9e7", -- saffire
+          blue = "#fba4d2", -- pinkish red
+          peach = "#b3deef", -- greenish teal
           green = "#c0c0c0", -- silver
           red = "#ff7bb4", -- dark pink
-          maroon = "#eac2e2", -- light pink
-          text = "#ffffff",
-          surface0 = "#000000",
+          maroon = "#fecca8", -- light pink
+          yellow = "#fde5b4",
+          text = "#eeeeee",
+          surface0 = "#202020",
         },
       },
     },
