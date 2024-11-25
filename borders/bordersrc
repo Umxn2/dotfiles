@@ -1,5 +1,4 @@
 #!/bin/bash
-
 options=(
   style=round
   width=2.0

@@ -18,14 +18,14 @@ return {
           base = "#1a1a1a",
           mantle = "#1a1a1a",
           crust = "#1a1a1a",
-          lavender = "#cdeaf7", -- yellow
+          lavender = "#cdeaf7", -- cloudy blue
           mauve = "#6fc9e7", -- saffire
-          blue = "#fba4d2", -- pinkish red
-          peach = "#b3deef", -- greenish teal
+          blue = "#fba4d2", -- pink
+          peach = "#b3deef", -- light blue
           green = "#c0c0c0", -- silver
           red = "#ff7bb4", -- dark pink
-          maroon = "#fecca8", -- light pink
-          yellow = "#fde5b4",
+          maroon = "#fecca8", -- peach
+          yellow = "#fde5b4", -- light yellow
           text = "#eeeeee",
           surface0 = "#202020",
         },
