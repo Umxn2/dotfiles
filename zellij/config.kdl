@@ -284,7 +284,7 @@ ui {
          magenta "#ffadef"
          orange "#ffadef"
          cyan "#6fc5ff"
-         black "#000000"
+         black "#191919"
          white "#ffffff"
      }
  }
