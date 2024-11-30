@@ -1,45 +1,49 @@
 local wezterm = require("wezterm")
 local config = {}
 config.term = "wezterm"
+--config.colors = {
+--	background = "#191919",
+--	foreground = "#ffffff",
+--	cursor_border = "#a8deef",
+--	cursor_bg = "#a8deef",
+--	cursor_fg = "black",
+--	selection_fg = "#ffffff",
+--	selection_bg = "#372f39",
+--	ansi = {
+--		"#000000", -- black
+--		"#ff759b", -- red
+--		"#baf59f", -- green
+--		"#fae4a3", -- yellow
+--		"#6fc5ff", -- blue
+--		"#ffadef", -- magenta
+--		"#6fc5ff",
+--		"#ffffff",
+--	},
+--	brights = {
+--		"#bbbbbb",
+--		"#ff759b",
+--		"#baf59f",
+--		"#fae4a3",
+--		"#6fc5ff",
+--		"#ffadef",
+--		"#6fc5ff",
+--		"#ffffff",
+--	},
+--}
+config.color_scheme = "Gruvbox Material (Gogh)"
 config.colors = {
-	background = "#191919",
-	foreground = "#ffffff",
-	cursor_border = "#a8deef",
-	cursor_bg = "#a8deef",
-	cursor_fg = "black",
-	selection_fg = "#ffffff",
-	selection_bg = "#372f39",
-	ansi = {
-		"#000000", -- black
-		"#ff759b", -- red
-		"#baf59f", -- green
-		"#fae4a3", -- yellow
-		"#6fc5ff", -- blue
-		"#ffadef", -- magenta
-		"#6fc5ff",
-		"#ffffff",
-	},
-	brights = {
-		"#bbbbbb",
-		"#ff759b",
-		"#baf59f",
-		"#fae4a3",
-		"#6fc5ff",
-		"#ffadef",
-		"#6fc5ff",
-		"#ffffff",
-	},
+	background = "#151515",
 }
 config.foreground_text_hsb = {
 	hue = 1.0,
 	saturation = 1.00,
-	brightness = 1.00,
+	brightness = 1.30,
 }
 config.dpi = 144.0
 config.bold_brightens_ansi_colors = false
 config.max_fps = 120
-config.font = wezterm.font("JetBrainsMono Nerd Font", { stretch = "Expanded", weight = "Medium" })
-config.font_size = 16
+config.font = wezterm.font("IosevkaTerm Nerd Font Mono", { weight = "Medium" })
+config.font_size = 16.5
 config.window_decorations = "RESIZE"
 config.window_close_confirmation = "NeverPrompt"
 config.adjust_window_size_when_changing_font_size = false
@@ -66,7 +70,6 @@ config.enable_tab_bar = false
 config.initial_cols = 175
 config.initial_rows = 55
 config.pane_focus_follows_mouse = true
-config.freetype_load_target = "Light"
 config.freetype_render_target = "HorizontalLcd"
 config.automatically_reload_config = true
 return config

@@ -1,35 +1,22 @@
 return {
-  {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = function()
-        require("catppuccin").load()
-      end,
-    },
-  },
-  {
-    "catppuccin/nvim",
-    name = "catppuccin",
-    priority = 1000,
-    opts = {
-      no_italic = true,
-      color_overrides = {
-        mocha = {
-          base = "#191919",
-          mantle = "#191919",
-          crust = "#191919",
-          lavender = "#cdeaf7", -- cloudy blue
-          mauve = "#6fc9e7", -- saffire
-          blue = "#fba4d2", -- pink
-          peach = "#b3deef", -- light blue
-          green = "#c0c0c0", -- silver
-          red = "#ff7bb4", -- dark pink
-          maroon = "#fecca8", -- peach
-          yellow = "#fde5b4",
-          text = "#eeeeee",
-          surface0 = "#202020",
-        },
-      },
-    },
-  },
+  "sainnhe/gruvbox-material",
+  priority = 1000,
+  config = function()
+    vim.o.background = "dark" -- or "light" for light mode
+    vim.cmd("let g:gruvbox_material_background= 'hard'")
+    vim.cmd("let g:gruvbox_material_transparent_background=2")
+    vim.cmd("let g:gruvbox_material_diagnostic_line_highlight=1")
+    vim.cmd("let g:gruvbox_material_ui_contrast='low'")
+    vim.cmd("let g:gruvbox_material_diagnostic_virtual_text='grey'")
+    vim.cmd("let g:gruvbox_material_better_performance=1")
+    vim.cmd("let g:gruvbox_material_inlay_hints_background='none'")
+    --vim.cmd("let g:gruvbox_material_diagnostic_line_highlight=1")
+    -- vim.cmd("let g:gruvbox_material_diagnostic_text_highlight = 1")
+    vim.g.gruvbox_material_enable_italic = false
+    --vim.g.gruvbox_material_colors_override = {}
+    vim.cmd([[colorscheme gruvbox-material]]) -- Set color scheme
+    vim.api.nvim_set_hl(0, "FloatBorder", { link = "Normal" })
+    vim.api.nvim_set_hl(0, "LspInfoBorder", { link = "Normal" })
+    vim.api.nvim_set_hl(0, "NormalFloat", { link = "Normal" })
+  end,
 }
