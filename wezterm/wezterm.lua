@@ -32,23 +32,35 @@ config.term = "wezterm"
 --}
 config.color_scheme = "Gruvbox Material (Gogh)"
 config.colors = {
-	background = "#151515",
+	cursor_border = "#ddc7a1",
+	cursor_bg = "#ddc7a1",
+	background = "#191919",
 }
 config.foreground_text_hsb = {
 	hue = 1.0,
 	saturation = 1.00,
-	brightness = 1.30,
+	brightness = 1.40,
 }
+--config.window_frame = {
+--	border_left_width = "0.15cell",
+--	border_right_width = "0.15cell",
+--	border_bottom_height = "0.05cell",
+--	border_top_height = "0.05cell",
+--	border_left_color = "#ffffff",
+--	border_right_color = "#ffffff",
+--	border_bottom_color = "#ffffff",
+--	border_top_color = "#ffffff",
+--}
 config.dpi = 144.0
-config.bold_brightens_ansi_colors = false
+config.bold_brightens_ansi_colors = true
 config.max_fps = 120
-config.font = wezterm.font("IosevkaTerm Nerd Font Mono", { weight = "Medium" })
-config.font_size = 16.5
+config.font = wezterm.font("IosevkaTerm Nerd Font Mono", { weight = "DemiBold" })
+config.font_size = 17.5
 config.window_decorations = "RESIZE"
 config.window_close_confirmation = "NeverPrompt"
 config.adjust_window_size_when_changing_font_size = false
 config.window_padding = {
-	left = 0,
+	left = 5,
 	right = 0,
 	top = 0,
 	bottom = 0,

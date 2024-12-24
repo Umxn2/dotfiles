@@ -7,7 +7,7 @@ vim.g.terminal_emulator = "wezterm"
 vim.opt.termguicolors = true
 vim.cmd("highlight NoiceCmdlinePopupBorder guifg=#ddc7a1")
 vim.cmd("highlight NoiceCmdlineIcon guifg=#ddc7a1")
-vim.cmd("highlight Title guifg=#d0375e")
+vim.cmd("highlight Title guifg=#1AB8BD")
 vim.cmd("highlight WinSeparator guifg=#ddc7a1")
 vim.cmd([[
   highlight MatchParen ctermfg=green ctermbg=none gui=bold guifg=#BECC70 guibg=none
