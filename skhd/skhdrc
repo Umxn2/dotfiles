@@ -1,4 +1,2 @@
-cmd - return : open -a Wezterm
+cmd - return : open -a Ghostty
 
-# open qutebrowser
-cmd + shift - return : open -a Term

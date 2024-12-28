@@ -1,0 +1,25 @@
+font-family = "IosevkaTerm Nerd Font Mono"
+font-size = 18
+font-thicken = true
+theme = "gruvbox-material"
+background = "1b1b1b"
+cursor-style = block
+cursor-style-blink = false
+cursor-color=D4BE97
+shell-integration-features = no-cursor
+macos-titlebar-style = hidden
+macos-option-as-alt = true
+quit-after-last-window-closed = true
+focus-follows-mouse = true
+resize-overlay = never
+quick-terminal-position = top 
+quick-terminal-animation-duration = 0
+keybind = global:cmd+shift+space=toggle_quick_terminal
+keybind = alt+left=unbind
+keybind = alt+right=unbind
+palette = 0=#474340
+palette = 8=#505050
+macos-icon = custom-style
+macos-icon-frame = beige
+macos-icon-ghost-color = ffffff
+macos-icon-screen-color = ffffff

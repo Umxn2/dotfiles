@@ -34,7 +34,7 @@ config.color_scheme = "Gruvbox Material (Gogh)"
 config.colors = {
 	cursor_border = "#ddc7a1",
 	cursor_bg = "#ddc7a1",
-	background = "#191919",
+	background = "#1b1b1b",
 }
 config.foreground_text_hsb = {
 	hue = 1.0,
@@ -55,7 +55,7 @@ config.dpi = 144.0
 config.bold_brightens_ansi_colors = true
 config.max_fps = 120
 config.font = wezterm.font("IosevkaTerm Nerd Font Mono", { weight = "DemiBold" })
-config.font_size = 17.5
+config.font_size = 18.5
 config.window_decorations = "RESIZE"
 config.window_close_confirmation = "NeverPrompt"
 config.adjust_window_size_when_changing_font_size = false
