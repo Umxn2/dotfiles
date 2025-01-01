@@ -39,7 +39,7 @@ config.colors = {
 config.foreground_text_hsb = {
 	hue = 1.0,
 	saturation = 1.00,
-	brightness = 1.40,
+	--	brightness = 1.40,
 }
 --config.window_frame = {
 --	border_left_width = "0.15cell",

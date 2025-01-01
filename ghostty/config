@@ -17,9 +17,9 @@ quick-terminal-animation-duration = 0
 keybind = global:cmd+shift+space=toggle_quick_terminal
 keybind = alt+left=unbind
 keybind = alt+right=unbind
-palette = 0=#474340
-palette = 8=#505050
 macos-icon = custom-style
 macos-icon-frame = beige
 macos-icon-ghost-color = ffffff
 macos-icon-screen-color = ffffff
+confirm-close-surface = false
+window-padding-balance = true
