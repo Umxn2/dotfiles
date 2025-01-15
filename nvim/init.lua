@@ -13,7 +13,7 @@ vim.g.terminal_emulator = "xterm-ghostty"
 vim.opt.termguicolors = true
 vim.cmd("highlight NoiceCmdlinePopupBorder guifg=#ddc7a1")
 vim.cmd("highlight NoiceCmdlineIcon guifg=#ddc7a1")
-vim.cmd("highlight Title guifg=#D0375E")
+vim.cmd("highlight Title guifg=#7CAEA3")
 vim.cmd("highlight WinSeparator guifg=#ddc7a1")
 vim.cmd([[
   highlight MatchParen ctermfg=green ctermbg=none gui=bold guifg=#BECC70 guibg=none

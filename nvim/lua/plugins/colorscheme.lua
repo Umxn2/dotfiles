@@ -1,5 +1,6 @@
 return {
     "sainnhe/gruvbox-material",
+    lazy = false,
     priority = 1000,
     config = function()
         vim.o.background = "dark" -- or "light" for light mode
@@ -14,8 +15,16 @@ return {
         -- vim.cmd("let g:gruvbox_material_diagnostic_text_highlight = 1")
         vim.cmd("let g:gruvbox_material_cursor='auto'")
         vim.g.gruvbox_material_enable_italic = false
-        vim.g.gruvbox_material_colors_override =
-            { bg_dim = { "#1b1b1b", "250" }, bg0 = { "#1b1b1b", "250" }, aqua = { "#D0375E", "250" } }
+        vim.g.gruvbox_material_colors_override = {
+            bg_dim = { "#202020", 250 },
+            bg0 = { "#202020", 250 },
+            yellow = { "#7CAEA3", 250 },
+            red = { "#D8A656", 250 },
+            green = { "#89B482", 250 },
+            aqua = { "#A3C5A9", 250 },
+            orange = { "#D8A656", 250 },
+            purple = { "#c77776", 250 },
+        }
         vim.cmd([[colorscheme gruvbox-material]]) -- Set color scheme
         vim.api.nvim_set_hl(0, "FloatBorder", { link = "Normal" })
         vim.api.nvim_set_hl(0, "LspInfoBorder", { link = "Normal" })

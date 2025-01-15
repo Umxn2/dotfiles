@@ -15,7 +15,8 @@ return -- lazy.nvim
  ░███ ░░██████  ░░███   ███   ░███  ░███ ░░░  ░███ 
  ░███  ░░█████   ░░░█████░    ░███  ░███      ░███ 
  █████  ░░█████    ░░███      █████ █████     █████
-░░░░░    ░░░░░      ░░░      ░░░░░ ░░░░░     ░░░░░]],
+░░░░░    ░░░░░      ░░░      ░░░░░ ░░░░░     ░░░░░
+]],
             },
 
             sections = {
@@ -36,10 +37,10 @@ return -- lazy.nvim
                 },
                 { icon = "✦", title = "Todo List ", pane = 2, indent = 2 },
                 {
-                    pane = 4,
+                    pane = 2,
                     section = "terminal",
                     indent = 3,
-                    cmd = "watch -n 2 -t -x todo-cli-app -f $HOME/Work/Todo/$(date '+%d-%m-%y').txt list",
+                    cmd = "watch -n 2 -t -x todo-cli-app -f $HOME/Work/Todo/$(date +%d-%m-%y).txt list",
                 },
                 { pane = 2, icon = " ", title = "Projects", section = "projects", indent = 2, padding = 0 },
                 --{ icon = " ", title = "Recent Files", section = "recent_files", indent = 2, padding = 1 },
