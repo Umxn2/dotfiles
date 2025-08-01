@@ -1,9 +1,7 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-if [ -z "$TMUX" ]; then
-  exec tmux new-session -A -s workspace
-fi
+
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -20,7 +18,6 @@ alias todo="todo-cli-app -f $to_do_file"
 export FZF_BASE="$HOME"
 export SPOTIPY_CLIENT_ID='f062d91f402045d68d02f391fa6de41c'
 export SPOTIPY_CLIENT_SECRET='9fef0ed695654b16b2267d04fba1bfd7'
-fpath+=("$(brew --prefix)/share/zsh/site-functions")
 export PATH="$HOME/.cargo/bin:$PATH"
 alias g++='g++-14'
 alias spotifyp='spotify_player'
@@ -37,6 +34,7 @@ alias cd='z'
 alias ls='eza --icons'
 alias glow='glow -n'
 alias icat='kitten icat'
+alias problems='java -cp postgresql-42.7.7.jar:. Problems.java'
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 function mkcd {
   if [ ! -n "$1" ]; then
@@ -132,3 +130,12 @@ function mkcd {
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+export JAVA_HOME=$(/usr/libexec/java_home -v 23.0.2)
+
+# bun completions
+[ -s "/Users/umang/.bun/_bun" ] && source "/Users/umang/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
