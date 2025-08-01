@@ -7,11 +7,168 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "lsp": {
+    "jdtls": {
+      "initialization_options": {
+        "settings": {
+          "java": {
+            "import": {
+              "maven": { "enabled": true },
+              "gradle": { "enabled": true }
+            }
+          }
+        }
+      }
+    }
+  },
+  "features": {
+    "edit_prediction_provider": "none"
+  },
+  "buffer_font_family": "IosevkaTerm Nerd Font Mono",
+  "ui_font_family": "IosevkaTerm Nerd Font Mono",
+  "buffer_font_weight": 330,
+  "agent": {
+    "enabled": false
+  },
+  "experimental.theme_overrides": {
+    "editor.background": "#202020",
+    "editor.gutter.background": "#202020",
+    "scrollbar.track.border": "#202020",
+    "scrollbar.track.background": "#202020",
+    "scrollbar.thumb.hover_background": "#252525",
+    "status_bar.background": "#202020",
+    "tab.active_background": "#303030",
+    "tab.inactive_background": "#202020",
+    "toolbar.background": "#292929",
+    "title_bar.background": "#202020",
+    "tab_bar.background": "#202020",
+    "panel.focused_border": "#7daea3",
+    "border": "#404040",
+    "background": "#202020",
+    "terminal.ansi.background": "#202020",
+    "surface.background": "#202020",
+    "elevated_surface.background": "#2e383c",
+    "terminal.background": "#202020",
+    "panel.background": "#202020",
+    "syntax": {
+      "keyword": {
+        "color": "#d3c6aa",
+        "font_style": null,
+        "font_weight": null
+      },
+      "function": {
+        "color": "#A8B665",
+        "font_style": null,
+        "font_weight": null
+      },
+      "operator": {
+        "color": "#d3c6aa",
+        "font_style": null,
+        "font_weight": null
+      },
+      "constructor": {
+        "color": "#E68A4D",
+        "font_style": null,
+        "font_weight": null
+      },
+      "property": {
+        "color": "#83c092",
+        "font_style": null,
+        "font_weight": null
+      },
+      "string": {
+        "color": "#89B482",
+        "font_style": null,
+        "font_weight": null
+      },
+      "type": {
+        "color": "#7CAEA3",
+        "font_style": null,
+        "font_weight": null
+      },
+      "punctuation.bracket": {
+        "color": "#d3c6aa",
+        "font_style": "normal"
+      }
+    }
+  },
+  "cursor_blink": false,
+  "vim_mode": true,
   "ui_font_size": 16,
   "buffer_font_size": 16,
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "One Dark"
+    "dark": "Everforest Dark Hard"
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "active_pane_modifiers": {
+    "border_size": 1.0
+  },
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 1000
+    }
+  },
+  "scrollbar": {
+    "show": "system"
+  },
+  "tab_bar": {
+    "show": true,
+    "show_nav_history_buttons": false,
+    "show_tab_bar_buttons": false
+  },
+  "toolbar": {
+    "breadcrumbs": false,
+    "quick_actions": false,
+    "selections_menu": true,
+    "agent_review": false,
+    "code_actions": false
+  },
+  "indent_guides": {
+    "enabled": false
+  },
+  "title_bar": {
+    "show_branch_icon": true,
+    "show_branch_name": false,
+    "show_project_items": true,
+    "show_onboarding_banner": false,
+    "show_user_picture": false,
+    "show_sign_in": false,
+    "show_menus": false
+  },
+  "relative_line_numbers": true,
+  "terminal": {
+    "alternate_scroll": "off",
+    "blinking": "terminal_controlled",
+    "copy_on_select": true,
+    "keep_selection_on_copy": false,
+    "dock": "right",
+    "default_width": 320,
+    "default_height": 320,
+    "detect_venv": {
+      "on": {
+        "directories": [".env", "env", ".venv", "venv"],
+        "activate_script": "default"
+      }
+    },
+    "env": {},
+    "font_family": "IosevkaTerm Nerd Font Mono",
+    "font_features": null,
+    "font_size": null,
+    "line_height": "comfortable",
+    "option_as_meta": true,
+    "button": true,
+    "shell": "system",
+    "toolbar": {
+      "breadcrumbs": true
+    },
+    "working_directory": "current_project_directory",
+    "scrollbar": {
+      "show": null
+    }
   }
 }

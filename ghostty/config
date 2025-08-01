@@ -1,6 +1,11 @@
-font-family = "IosevkaTerm Nerd Font Mono"
-font-size = 18
-font-thicken = true
+font-family = IosevkaTerm Nerd Font Mono
+font-style = Light 
+font-style-bold = SemiBold 
+font-style-italic = Light Italic
+font-style-bold-italic = SemiBold Italic
+font-size = 16
+font-thicken = false 
+background-opacity = 1.00
 theme = gruvbox-material
 background = #202020 
 cursor-style = block 

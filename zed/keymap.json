@@ -1,0 +1,58 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Editor",
+    "bindings": {
+      "g d": ["task::Spawn", { "task_name": "Open Java import in Neovim" }]
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      // "shift shift": "file_finder::Toggle"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == insert && !menu",
+    "bindings": {
+      // "j k": "vim::SwitchToNormalMode"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-p r": "pane::SplitRight"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-p d": "pane::SplitDown"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "alt-right": "workspace::ActivatePaneRight",
+      "alt-left": "workspace::ActivatePaneLeft",
+      "alt-up": "workspace::ActivatePaneUp",
+      "alt-down": "workspace::ActivatePaneDown"
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "alt-left": ["terminal::SendKeystroke", "alt-left"],
+      "alt-right": ["terminal::SendKeystroke", "alt-right"],
+      "alt-up": ["terminal::SendKeystroke", "alt-up"],
+      "alt-down": ["terminal::SendKeystroke", "alt-down"],
+      "alt-/": "workspace::ActivatePaneLeft"
+    }
+  }
+]

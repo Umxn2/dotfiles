@@ -11,7 +11,11 @@
     "stelo",
     "thomaslombart",
     "srikirank",
-    "vimtor"
+    "vimtor",
+    "samuelkraft",
+    "bendrucker",
+    "vmrjnvc",
+    "dinocosta"
   ],
   "license": "MIT",
   "commands": [
@@ -77,7 +81,7 @@
           "type": "checkbox",
           "title": "Count",
           "label": "Display To-Do",
-          "description": "When enabled, the first Things to-do wil be displayed in the menu bar.",
+          "description": "When enabled, the first incomplete Things to-do will be displayed in the menu bar.",
           "default": true,
           "required": false
         },
@@ -138,6 +142,486 @@
       ]
     }
   ],
+  "tools": [
+    {
+      "name": "get-list-todos",
+      "title": "Get List Todos",
+      "description": "Get all the todos from a list in Things",
+      "input": {
+        "type": "object",
+        "properties": {
+          "commandListName": {
+            "type": "string",
+            "description": "The name of the list to get todos from",
+            "enum": [
+              "inbox",
+              "today",
+              "anytime",
+              "upcoming",
+              "someday"
+            ]
+          }
+        },
+        "required": [
+          "commandListName"
+        ]
+      },
+      "confirmation": false
+    },
+    {
+      "name": "get-projects",
+      "title": "Get Projects",
+      "description": "Get all the projects in Things",
+      "confirmation": false
+    },
+    {
+      "name": "get-areas",
+      "title": "Get Areas",
+      "description": "Get all the areas in Things",
+      "confirmation": false
+    },
+    {
+      "name": "get-tags",
+      "title": "Get Tags",
+      "description": "Get all the tags in Things",
+      "confirmation": false
+    },
+    {
+      "name": "get-lists",
+      "title": "Get Lists",
+      "description": "Get all the lists in Things",
+      "confirmation": false
+    },
+    {
+      "name": "delete-todo",
+      "title": "Delete Todo",
+      "description": "Delete a todo in Things",
+      "input": {
+        "type": "object",
+        "properties": {
+          "todoId": {
+            "type": "string",
+            "description": "The todo id to delete"
+          }
+        },
+        "required": [
+          "todoId"
+        ]
+      },
+      "confirmation": true
+    },
+    {
+      "name": "update-todo",
+      "title": "Update Todo",
+      "description": "Update a todo in Things",
+      "input": {
+        "type": "object",
+        "properties": {
+          "todoId": {
+            "type": "string",
+            "description": "The todo id to update"
+          },
+          "todoParams": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "type": "string"
+              },
+              "notes": {
+                "type": "string"
+              },
+              "prepend-notes": {
+                "type": "string"
+              },
+              "append-notes": {
+                "type": "string"
+              },
+              "when": {
+                "type": "string"
+              },
+              "deadline": {
+                "type": "string"
+              },
+              "tags": {
+                "type": "string"
+              },
+              "add-tags": {
+                "type": "string"
+              },
+              "checklist-items": {
+                "type": "string"
+              },
+              "prepend-checklist-items": {
+                "type": "string"
+              },
+              "append-checklist-items": {
+                "type": "string"
+              },
+              "list": {
+                "type": "string"
+              },
+              "list-id": {
+                "type": "string"
+              },
+              "heading": {
+                "type": "string"
+              },
+              "completed": {
+                "type": "boolean"
+              },
+              "canceled": {
+                "type": "boolean"
+              },
+              "reveal": {
+                "type": "boolean"
+              },
+              "duplicate": {
+                "type": "boolean"
+              },
+              "creation-date": {
+                "type": "string"
+              },
+              "completion-date": {
+                "type": "string"
+              }
+            },
+            "required": [],
+            "description": "The parameters to update"
+          }
+        },
+        "required": [
+          "todoId",
+          "todoParams"
+        ]
+      },
+      "confirmation": false
+    },
+    {
+      "name": "set-todo-property",
+      "title": "Set Todo Property",
+      "description": "Set a property of a todo in Things",
+      "input": {
+        "type": "object",
+        "properties": {
+          "todoId": {
+            "type": "string",
+            "description": "The todo id to update"
+          },
+          "key": {
+            "type": "string",
+            "description": "The key to update"
+          },
+          "value": {
+            "type": "string",
+            "description": "The value to update"
+          }
+        },
+        "required": [
+          "todoId",
+          "key",
+          "value"
+        ]
+      },
+      "confirmation": false
+    },
+    {
+      "name": "add-todo",
+      "title": "Add Todo",
+      "description": "Add a todo in Things",
+      "input": {
+        "type": "object",
+        "properties": {
+          "todoParams": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "type": "string"
+              },
+              "notes": {
+                "type": "string"
+              },
+              "when": {
+                "type": "string"
+              },
+              "deadline": {
+                "type": "string"
+              },
+              "tags": {
+                "type": "string"
+              },
+              "add-tags": {
+                "type": "string"
+              },
+              "checklist-items": {
+                "type": "string"
+              },
+              "list-id": {
+                "type": "string"
+              },
+              "heading": {
+                "type": "string"
+              },
+              "heading-id": {
+                "type": "string"
+              },
+              "completed": {
+                "type": "boolean"
+              },
+              "canceled": {
+                "type": "boolean"
+              },
+              "duplicate": {
+                "type": "boolean"
+              },
+              "creation-date": {
+                "type": "string"
+              },
+              "completion-date": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "when"
+            ],
+            "description": "The todo parameters to set"
+          }
+        },
+        "required": [
+          "todoParams"
+        ]
+      },
+      "confirmation": false
+    },
+    {
+      "name": "add-project",
+      "title": "Add Project",
+      "description": "Add a project in Things",
+      "input": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "notes": {
+            "type": "string"
+          },
+          "when": {
+            "type": "string"
+          },
+          "area-id": {
+            "type": "string"
+          },
+          "deadline": {
+            "type": "string"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "to-dos": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "title",
+          "when"
+        ]
+      },
+      "confirmation": false
+    }
+  ],
+  "ai": {
+    "instructions": "Moving a todo means changing its list. For example, moving \"buy milk\" from inbox to today means changing its list to today. Only update the when property of the todo when referring to a date.",
+    "evals": [
+      {
+        "input": "@things what are my todos for today?",
+        "mocks": {
+          "get-list-todos": [
+            {
+              "status": "open",
+              "dueDate": null,
+              "activationDate": "2025-01-20T23:00:00.000Z",
+              "id": "HMm6mQGFoV9SrE3rMkGuCY",
+              "notes": "",
+              "area": null,
+              "project": null,
+              "name": "Buy milk",
+              "tags": ""
+            }
+          ]
+        },
+        "expected": [
+          {
+            "callsTool": {
+              "name": "get-list-todos",
+              "arguments": {
+                "commandListName": "today"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "input": "@things add \"buy milk\" to my inbox",
+        "mocks": {
+          "add-todo": "Successfully called \"add-todo\""
+        },
+        "expected": [
+          {
+            "callsTool": {
+              "name": "add-todo",
+              "arguments": {
+                "todoParams.title": "buy milk",
+                "todoParams.when": "inbox"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "input": "@things mark \"buy milk\" in inbox as done",
+        "mocks": {
+          "update-todo": "Successfully called \"update-todo\"",
+          "get-list-todos": [
+            {
+              "status": "open",
+              "id": "VBAWWiuRj3yx4KuMp45XBm",
+              "name": "buy milk",
+              "completed": false
+            }
+          ]
+        },
+        "expected": [
+          {
+            "callsTool": {
+              "name": "get-list-todos",
+              "arguments": {
+                "commandListName": "inbox"
+              }
+            }
+          },
+          {
+            "callsTool": {
+              "name": "update-todo",
+              "arguments": {
+                "todoParams.completed": true,
+                "todoId": "VBAWWiuRj3yx4KuMp45XBm"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "input": "@things set the deadline for \"buy milk\" in inbox to saturday",
+        "mocks": {
+          "get-list-todos": [
+            {
+              "status": "open",
+              "dueDate": null,
+              "activationDate": "2025-01-20T23:00:00.000Z",
+              "id": "7sGLDpW4qZepHsCcXinGg9",
+              "notes": "",
+              "area": null,
+              "project": null,
+              "name": "buy milk",
+              "tags": ""
+            }
+          ],
+          "update-todo": "Successfully called \"update-todo\""
+        },
+        "expected": [
+          {
+            "callsTool": {
+              "arguments": {
+                "commandListName": "inbox"
+              },
+              "name": "get-list-todos"
+            }
+          },
+          {
+            "callsTool": {
+              "name": "update-todo",
+              "arguments": {
+                "todoParams.deadline": "2025-02-15",
+                "todoId": "7sGLDpW4qZepHsCcXinGg9"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "input": "@things move all todos from my inbox to today",
+        "mocks": {
+          "update-todo": "Successfully called \"update-todo\"",
+          "get-list-todos": [
+            {
+              "status": "open",
+              "dueDate": null,
+              "activationDate": null,
+              "id": "VBAWWiuRj3yx4KuMp45XBm",
+              "notes": "",
+              "area": null,
+              "project": null,
+              "name": "buy milk",
+              "tags": ""
+            }
+          ]
+        },
+        "expected": [
+          {
+            "callsTool": {
+              "name": "get-list-todos",
+              "arguments": {
+                "commandListName": "inbox"
+              }
+            }
+          },
+          {
+            "callsTool": {
+              "name": "update-todo",
+              "arguments": {
+                "todoParams.list": "today",
+                "todoId": "VBAWWiuRj3yx4KuMp45XBm"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "input": "@things delete \"buy milk\" from inbox",
+        "mocks": {
+          "get-list-todos": [
+            {
+              "status": "open",
+              "id": "W74ShepRoZxh4cySkBzsJh",
+              "name": "Buy milk"
+            }
+          ],
+          "delete-todo": "Successfully called \"delete-todo\""
+        },
+        "expected": [
+          {
+            "callsTool": {
+              "arguments": {
+                "commandListName": "inbox"
+              },
+              "name": "get-list-todos"
+            }
+          },
+          {
+            "callsTool": {
+              "name": "delete-todo",
+              "arguments": {
+                "todoId": "W74ShepRoZxh4cySkBzsJh"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
   "preferences": [
     {
       "name": "authToken",
@@ -184,6 +668,10 @@
     "build": "ray build -e dist",
     "dev": "ray develop",
     "fix-lint": "ray lint --fix",
-    "lint": "ray lint"
-  }
+    "lint": "ray lint",
+    "publish": "npx @raycast/api@latest publish"
+  },
+  "platforms": [
+    "macOS"
+  ]
 }
